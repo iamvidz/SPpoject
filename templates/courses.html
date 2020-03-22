@@ -1,0 +1,39 @@
+
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+	{% load static %}
+
+	
+
+	<div id="banner" style="background: url({% static 'images/techlogo.png' %})"></div>
+	
+	<div id="portfolio-wrapper">
+		<div id="portfolio" class="container">
+			{% for course in c %}
+			<div id="column1">
+				<div class="title">
+					<h2 style="color:#03A9F4">{{course.name}}</h2>
+				</div>
+				<!--<a href="#" class="image image-full"><img src="{% static 'images/clogo.png' %}" alt="" /></a>-->
+				<p>{{course.desc}}</p>
+				<button class="icon icon-arrow-right button" onclick="">Read More</a> 
+			</div>
+			{% endfor %}
+			
+		</div>
+	</div>
+
+
+{% load static %}
+<script src="{% static 'js/newjavascript.js' %}"></script>
+
+
+{% endblock %}
+
+
+
+
+

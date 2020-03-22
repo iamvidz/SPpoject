@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+{% load static %}
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Courses</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Chivo:400,900" rel="stylesheet" />
+<link href="{% static 'css/default.css' %}" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static 'css/fonts.css' %}" rel="stylesheet" type="text/css" media="all" />
+
+</head>
+<body>
+
+    <div id="wrapper">
+        <div id="menu-wrapper">
+            <div id="menu" class="container">
+                <ul>
+                    <li class="current_page_item"><a href="#">Courses</a></li>
+                    <li><a href="#">Q/A</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Hello {{user.first_name}}</a></li>
+                    <li><a href="logout">Logout</a></li>
+                </ul>
+            </div>
+            <!-- end #menu --> 
+        </div>
+    {% block content %}
+
+
+
+    {% endblock %}
+
+</body>
+

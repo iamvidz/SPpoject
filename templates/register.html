@@ -1,0 +1,52 @@
+{% load static %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/ss.css' %}">
+</head>
+
+<body>
+    <div class="backRight" style="background-image: url({% static 'images/image2.jpg' %})"></div>
+    <div class="left">
+        <div class="content">
+            <h2>Sign Up</h2>
+            <form method="post" action="register">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="username" class="form-label" style="color: whitesmoke">Name</label>
+                    <input type="text" placeholder="Full name" name="fname" required="" />
+                </div>
+                <div class="form-group">
+                    <label for="username" class="form-label" style="color: whitesmoke">College ID</label>
+                    <input type="text" placeholder="College ID" name="collegeid" required="" />
+                </div>
+                <div>
+                    <label for="password" class="form-label" style="color: whitesmoke">Password</label>
+                    <input type="password" placeholder="Password" name="password" required="" />
+                </div>
+                <div class="form-group" style="color: whitesmoke">
+                    <label for="repass" class="form-label" style="color: whitesmoke">Re-enter </label>
+                    <input type="password" placeholder="Re-enter password" name="repass" required="" />
+                </div>
+
+                <div class="form-group" style="color: whitesmoke">
+                    Contact No.<input type="tel" name="contact" required="" />
+                </div>
+                <div class="form-group" style="color: whitesmoke">
+                    <label for="email" class="form-label" style="color: whitesmoke">Email ID </label>
+                    <input type="email" name="email" required="" />
+                </div>
+                <div style="color: rgb(235, 76, 76)" font-size="20px" >
+                    {% for msg in messages %}
+                    *{{msg}}
+                    {% endfor %}
+                </div>
+                <button type="submit">Sign up</button>
+                
+                
+            </form>
+            <label style="color:aliceblue">Already have an account?
+                <a href="login"><button id="goLeft" class="off">Log in</button></a></div>
+            
+        </div>
+    </div>
+</body>
