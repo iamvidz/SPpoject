@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load static %}
+
+{% if user.is_staff %}
+
+<form method="POST" enctype="multipart/form-data" action="upload_document">
+    {% csrf_token %}
+    <div style="margin-left:200px; margin-top:50px; ">{{form.document}}</div>
+    <button type="submit" style="background-color: #121250; color:rgb(255, 255, 255); margin-left:200px; margin-top:20px; margin-bottom:20px ">Upload</button>
+    
+</form>
+
+{% endif %}
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table align="center" style="margin-bottom: 30px;">
+        {% for doc in docs %}
+        <tr>
+            <div>
+            {% if user.is_staff %}
+            <td>
+                <a href="delete" name="{{doc.document}}" ><img src="{%static 'images/delete.png' %}"
+                            style="width: 25px; height: 25px; "></a>
+            </td>
+            {% endif %}
+            <td><a href="{{doc.document.url}}" download name="{{doc.pk}}"><img src="{%static 'images/download.png' %}"
+                            style="width: 25px; height: 25px; "></a></td>
+            <td><label style="vertical-align: top; font-size:large;"><<a href="{{doc.document.url}}">{{doc.document}}></a></label></td>
+            </div>
+        </tr>
+        {% endfor %}
+    </table>
+</form>
+{% endblock %}

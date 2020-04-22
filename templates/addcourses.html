@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+{% load static %}
+
+<form method="POST">
+    {% csrf_token %}
+    <table>
+    
+    <div style="margin-left: 180px;">
+        {{form.as_p}}
+        <button type="submit" name="add" style="background-color: #121250; color:rgb(255, 255, 255); margin-left:200px; margin-bottom:100px; "> Add </button>
+    </div>
+</table>
+</form>
+
+
+
+{% endblock %}

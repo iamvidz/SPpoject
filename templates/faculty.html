@@ -1,0 +1,40 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/ss.css' %}">
+
+
+<body>
+
+    
+    <div class="backLeft" style="background-image: url({% static 'images/image1.jpg' %})"></div>
+
+        <div class="right">
+            
+            <div class="content">
+                <h2>Faculty Login</h2>
+                <form method="post" action="login">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="username" class="form-label">Faculty ID</label>
+                        <input type="text" name="facultyid" required="" />
+                        
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" name="password" required="" />
+                        
+                    </div>
+                    <div style="color: rgb(235, 76, 76)" font-size="20px">
+                        {% for msg in messages %}
+                            *{{msg}}
+                        {% endfor %}
+                    </div>
+                    
+                    
+                    <button id="login" type="submit">Login</button>
+                    
+                </form>
+                <div>New here?
+                    <a href="register"><button id="goRight" class="off">Sign Up</button></a>
+                </div>
+              </div>
+        </div>

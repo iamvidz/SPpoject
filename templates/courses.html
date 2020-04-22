@@ -7,17 +7,25 @@
 	{% load static %}
 
 	
-
-	<div id="banner" style="background: url({% static 'images/techlogo.png' %})"></div>
 	
+	<div id="banner" style="background: url({% static 'images/try3.jpg' %});background-size: 100% 100%;"></div>
+	
+	{% if user.is_staff %}
+	
+    		
+    		<div style="margin-left: 180px; padding-top:2em; color: #121250;">
+			<h2>Want to add a new course?  
+			<a href="add_courses" style="color: #121250"> Click here</a></h2>
+			</div>
+	{% endif %}
+
 	<div id="portfolio-wrapper">
 		<div id="portfolio" class="container">
 			{% for course in c %}
-			<div id="column1">
+			<div id="column1" style="margin-left: 180px;">
 				<div class="title">
-					<h2 style="color:#03A9F4">{{course.name}}</h2>
+					<h2 style="color:midnightblue">{{course.name}}</h2>
 				</div>
-				<!--<a href="#" class="image image-full"><img src="{% static 'images/clogo.png' %}" alt="" /></a>-->
 				<p>{{course.desc}}</p>
 				<button class="icon icon-arrow-right button" onclick="">Read More</a> 
 			</div>
@@ -26,9 +34,6 @@
 		</div>
 	</div>
 
-
-{% load static %}
-<script src="{% static 'js/newjavascript.js' %}"></script>
 
 
 {% endblock %}

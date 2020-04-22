@@ -6,13 +6,24 @@ html, body {
 body {
 	margin: 0px;
 	padding: 0px;
-	background: #A80154;
+	
 	font-family: 'Chivo', sans-serif;
 	font-size: 12pt;
 	font-weight: 300;
 	color: #363636;
+	
 }
 
+input {
+	background: transparent;
+	border: 0;
+	outline: 0;
+	border-bottom: 1px solid #45494C;
+	font-size: 14px;
+	color: #959595;
+	padding: 8px 0;
+	margin-top: 20px;
+  }
 
 h1, h2, h3 {
 	margin: 0;
@@ -217,7 +228,6 @@ hr {
 .container {
 	width: 1200px;
 	margin: 0px auto;
-	
 }
 
 .clearfix {
@@ -286,20 +296,22 @@ hr {
 
 	#banner 
 	{
-		margin-top:10px;
+		margin-top:1px;
 		overflow: hidden;
 		height: 330px;
-		background-size: cover;
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		
 	}
 	
 	
 	
 
-/** MENU */
+/** MENU  #03A9F4*/
 
 #menu-wrapper
 {
-	background: #03A9F4;
+	background: #121250;
 }
 
 #menu {
@@ -387,6 +399,8 @@ hr {
 		overflow: hidden;
 		padding: 5em 0em;
 		text-align: center;
+		background-color: rgb(27, 27, 27);
+
 	}
 	
 	#copyright p
@@ -395,17 +409,12 @@ hr {
 		text-align: center;
 		text-transform: uppercase;
 		font-size: 0.80em;
-		color: rgba(255,255,255,.5);
+		color: white
 		
 	}
 	
-	#copyright a
-	{
-		text-decoration: none;
-		color: rgba(255,255,255,.7);
-	}
 
-/*********************************************************************************/
+/****color: #03A9F4;*****************************************************************************/
 /* Welcome                                                                       */
 /*********************************************************************************/
 
@@ -501,9 +510,11 @@ hr {
 	.button
 	{
 		display: inline-block;
-		margin-top: 1.5em;
+		margin-top: 0.2em;
+		margin-bottom: 2em;
+		text-align: center;
 		padding: 0.50em 3em 0.50em 2em;
-		background: #03A9F4;
+		background: midnightblue;
 		letter-spacing: 0.20em;
 		text-decoration: none;
 		text-transform: uppercase;

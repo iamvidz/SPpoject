@@ -17,7 +17,7 @@ def login(request):
             return redirect('courses')
         else:
             messages.info(request,'invalid username or password')
-            return redirect('login')
+            return redirect('studentlogin')
             
     else:
         return render(request,'login.html')
@@ -45,7 +45,7 @@ def register(request):
                 user=User.objects.create_user(username=collegeid,password=password,email=email,first_name=fname)
                 user.save()
                 print('user created')
-                return redirect('login')
+                return redirect('studentlogin')
         else:
             messages.info(request,"password does not match")
             return redirect('register')
@@ -56,4 +56,4 @@ def register(request):
 
 def logout(request):
     auth.logout(request)
-    return redirect('/')
+    return redirect('studentlogin')

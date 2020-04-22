@@ -5,5 +5,4 @@ from django.db import models
 class Course(models.Model):
 
     name = models.CharField(max_length=50)
-    desc = models.TextField()
-    docs = models.TextField()
+    desc = models.CharField(max_length=100)

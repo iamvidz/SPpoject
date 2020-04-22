@@ -25,7 +25,7 @@ body {
   right: 0;
   width: 50%;
   height: 100%;
-  background: #3498db;
+  background: rgb(73, 79, 92);
   
   background-size: cover;
   background-position: 50% 50%;
@@ -36,7 +36,7 @@ body {
   left: 0;
   width: 50%;
   height: 100%;
-  background: #e74c3c;
+  background: rgb(40, 135, 194);
   
   background-size: cover;
   background-position: 50% 50%;
@@ -69,7 +69,7 @@ body {
 .left {
   width: 50%;
   height: 100%;
-  background: #2C3034;
+  background: #f9f9f9;
   left: 0;
   position: absolute;
 }
@@ -92,13 +92,13 @@ body {
 }
 
 .content h2 {
-  color: #03A9F4;
+  color: midnightblue;
   font-weight: 300;
   font-size: 35px;
 }
 
 button {
-  background: #03A9F4;
+  background: midnightblue;
   padding: 10px 16px;
   width: auto;
   font-weight: 600;
@@ -116,12 +116,12 @@ button {
 }
 
 button:hover {
-  background: #0288D1;
+  background: midnightblue;
   box-shadow: 0 4px 7px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1);
 }
 .off {
   background: none;
-  color: #03A9F4;
+  color: midnightblue;
   box-shadow: none;
 }
 
@@ -132,7 +132,7 @@ button:hover {
 }
 .left .off:hover {
   box-shadow: none;
-  color: #03A9F4;
+  color: midnightblue;
   background: #363A3D;
 }
 input {

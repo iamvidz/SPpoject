@@ -15,9 +15,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from django.conf import settings
+from django.conf.urls.static import static
+#from courselist import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('studentlogin/',include('studentlogin.urls')),
     path('courselist/',include('courselist.urls')),
+    path('facultylogin/',include('facultylogin.urls')),
+    path('documents/',include('documents.urls')),
+    #path('aboutus/',views.aboutus),
+    #path('/',views.courses),
 ]
+
+if settings.DEBUG:
+
+    urlpatterns = urlpatterns + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
