@@ -12,5 +12,5 @@ urlpatterns=[
     #path("addcourses",views.addcourses,name='addcourses'),
     path("add_courses",views.add_courses,name='add_courses'),
     path("aboutus",views.aboutus),
-   
+    path("display",views.display),
 ]

@@ -10,7 +10,7 @@ from django.http import HttpResponse
 from django.contrib.auth.models import User,auth
 from courselist import views
 from django.contrib.auth.decorators import login_required
-
+from django.utils import timezone
 from django.shortcuts import get_object_or_404 
 
 
@@ -30,10 +30,13 @@ def upload_document(request):
 
 
 def delete(request):
-    if request.method == 'POST':
-        
-        doc = Document.objects.get()
-        doc.delete()
+    
+    if request.method=="POST":
+        doc=request.POST['pk']
+        b=Document.objects.get(id=doc).delete()
+    #b = Document.objects.get(id)
+
+    #Entry.objects.filter(document=b).delete()
 
     return redirect('display')
 
@@ -42,9 +45,11 @@ def delete(request):
 def display_docs(request):
 
 
-    docs = Document.objects.all()
+    #docs = Document.objects.all()
+    docs = Document.objects.filter(date__lte=timezone.now()).order_by('-date')
 
     return render(request, 'documents.html', {'docs' : docs})
+
 
 
 def download_file(request):

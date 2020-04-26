@@ -1,0 +1,34 @@
+DEPARTMENTAL PORTAL
+
+Python Version Used: 3.0.2
+Django Version Used: 3.8.1
+
+Required Software to install:
+	
+	- Pillow Software
+$pip install pillow
+
+List Of Requirements Implemented :
+	
+	- There are mainly two users of the website,
+		1. Faculty
+		2. Student
+
+	1. Functionalities implimented for Faclties:
+		- Add new course
+		- Add new documents on particular courses
+		- Delete particular document
+		- Download document
+ 			
+	2. Functionalities implimented for Students:
+		- View various course
+		- View different documents
+		- Download documents
+
+			
+	- Follwing are some list of URLS along with its functionality.
+	
+	1. 127.0.0.1:8000/facultylogin/login --> Login page for the faculty
+	2. 127.0.0.1:8000/studentlogin/login --> Login page for the student
+
+	
