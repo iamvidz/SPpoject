@@ -42,3 +42,7 @@ def add_courses(request):
 def aboutus(request):
 
 	return render(request,'aboutus.html')
+
+def display(request):
+
+	return redirect('display')

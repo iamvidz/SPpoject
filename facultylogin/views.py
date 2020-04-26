@@ -32,7 +32,6 @@ def register(request):
         facultyid = request.POST['facultyid']
         password = request.POST['password']
         repass = request.POST['repass']
-        contact = request.POST['contact']
         email = request.POST['email']
 
         if password == repass :
